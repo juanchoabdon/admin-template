@@ -1,0 +1,764 @@
+<!doctype html>
+<!--[if lte IE 9]>     <html lang="en" class="no-focus lt-ie10 lt-ie10-msg"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="no-focus"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+        <title>Codebase - Bootstrap 4 Admin Template &amp; UI Framework</title>
+
+        <meta name="description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+        <meta name="author" content="pixelcave">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!-- Open Graph Meta -->
+        <meta property="og:title" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework">
+        <meta property="og:site_name" content="Codebase">
+        <meta property="og:description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+        <link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/favicon-192x192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+        <!-- END Icons -->
+
+        <!-- Stylesheets -->
+        <!-- Page JS Plugins CSS -->
+        <link rel="stylesheet" href="assets/js/plugins/slick/slick.min.css"><link rel="stylesheet" href="assets/js/plugins/slick/slick-theme.min.css">
+
+        <!-- Codebase framework -->
+        <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+
+        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+        <!-- END Stylesheets -->
+    </head>
+    <body>
+        <!-- Page Container -->
+        <!--
+            Available classes for #page-container:
+
+        GENERIC
+
+            'enable-cookies'                            Remembers active color theme between pages (when set through color theme helper Codebase() -> uiHandleTheme())
+
+        SIDEBAR & SIDE OVERLAY
+
+            'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+            'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+            'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+            'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+            'sidebar-inverse'                           Dark themed sidebar
+
+            'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+            'side-overlay-o'                            Visible Side Overlay by default
+
+            'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+        HEADER
+
+            ''                                          Static Header if no class is added
+            'page-header-fixed'                         Fixed Header
+
+        HEADER STYLE
+
+            ''                                          Classic Header style if no class is added
+            'page-header-modern'                        Modern Header style
+            'page-header-inverse'                       Dark themed Header (works only with classic Header style)
+            'page-header-glass'                         Light themed Header with transparency by default
+                                                        (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+            'page-header-glass page-header-inverse'     Dark themed Header with transparency by default
+                                                        (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+        MAIN CONTENT LAYOUT
+
+            ''                                          Full width Main Content if no class is added
+            'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+            'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+        -->
+        <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed page-header-glass page-header-inverse main-content-boxed">
+
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <!-- Sidebar Scroll Container -->
+                <div id="sidebar-scroll">
+                    <!-- Sidebar Content -->
+                    <div class="sidebar-content">
+                        <!-- Side Header -->
+                        <div class="content-header content-header-fullrow bg-black-op-10">
+                            <div class="content-header-section text-center align-parent">
+                                <!-- Close Sidebar, Visible only on mobile screens -->
+                                <!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+                                <button type="button" class="btn btn-circle btn-dual-secondary d-lg-none align-v-r" data-toggle="layout" data-action="sidebar_close">
+                                    <i class="fa fa-times text-danger"></i>
+                                </button>
+                                <!-- END Close Sidebar -->
+
+                                <!-- Logo -->
+                                <div class="content-header-item">
+                                    <a class="link-effect font-w700" href="index.html">
+                                        <i class="si si-fire text-primary"></i>
+                                        <span class="font-size-xl text-dual-primary-dark">code</span><span class="font-size-xl text-primary">base</span>
+                                    </a>
+                                </div>
+                                <!-- END Logo -->
+                            </div>
+                        </div>
+                        <!-- END Side Header -->
+
+                        <!-- Side Main Navigation -->
+                        <div class="content-side content-side-full">
+                            <!--
+                            Mobile navigation, desktop navigation can be found in #page-header
+
+                            If you would like to use the same navigation in both mobiles and desktops, you can use exactly the same markup inside sidebar and header navigation ul lists
+                            -->
+                            <ul class="nav-main">
+                                <li>
+                                    <a href="fe_home.html"><i class="si si-home"></i>Home</a>
+                                </li>
+                                <li class="nav-main-heading">Various</li>
+                                <li>
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-puzzle"></i>Pages</a>
+                                    <ul>
+                                        <li>
+                                            <a href="fe_blog.html">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="fe_story.html">Story</a>
+                                        </li>
+                                        <li>
+                                            <a href="fe_team.html">Team</a>
+                                        </li>
+                                        <li>
+                                            <a href="fe_search.html">Search</a>
+                                        </li>
+                                        <li>
+                                            <a href="fe_helpdesk.html">Helpdesk</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-submenu" data-toggle="nav-submenu" href="#">Portfolio</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="fe_portfolio_single.html">Single</a>
+                                                </li>
+                                                <li>
+                                                    <a href="fe_portfolio_2cols.html">2 Columns</a>
+                                                </li>
+                                                <li>
+                                                    <a href="fe_portfolio_3cols.html">3 Columns</a>
+                                                </li>
+                                                <li>
+                                                    <a href="fe_portfolio_4cols.html">4 Columns</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-main-heading">Vital</li>
+                                <li>
+                                    <a class="active" href="fe_features.html"><i class="si si-wrench"></i>Features</a>
+                                </li>
+                                <li>
+                                    <a href="fe_pricing.html"><i class="si si-wallet"></i>Pricing</a>
+                                </li>
+                                <li>
+                                    <a href="fe_contact.html"><i class="si si-envelope-open"></i>Contact</a>
+                                </li>
+                                <li>
+                                    <a href="fe_about.html"><i class="si si-eye"></i>About</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END Side Main Navigation -->
+                    </div>
+                    <!-- Sidebar Content -->
+                </div>
+                <!-- END Sidebar Scroll Container -->
+            </nav>
+            <!-- END Sidebar -->
+
+            <!-- Header -->
+            <header id="page-header">
+                <!-- Header Content -->
+                <div class="content-header">
+                    <!-- Left Section -->
+                    <div class="content-header-section">
+                        <!-- Logo -->
+                        <div class="content-header-item">
+                            <a class="link-effect font-w700 mr-5" href="index.html">
+                                <i class="si si-fire text-primary"></i>
+                                <span class="font-size-xl text-dual-primary-dark">code</span><span class="font-size-xl text-primary">base</span>
+                            </a>
+                        </div>
+                        <!-- END Logo -->
+                    </div>
+                    <!-- END Left Section -->
+
+                    <!-- Right Section -->
+                    <div class="content-header-section">
+                        <!-- Header Navigation -->
+                        <!--
+                        Desktop Navigation, mobile navigation can be found in #sidebar
+
+                        If you would like to use the same navigation in both mobiles and desktops, you can use exactly the same markup inside sidebar and header navigation ul lists
+                        If your sidebar menu includes headings, they won't be visible in your header navigation by default
+                        If your sidebar menu includes icons and you would like to hide them, you can add the class 'nav-main-header-no-icons'
+                        -->
+                        <ul class="nav-main-header">
+                            <li>
+                                <a href="fe_home.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="nav-submenu" data-toggle="nav-submenu" href="#">Pages</a>
+                                <ul>
+                                    <li>
+                                        <a href="fe_blog.html">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="fe_story.html">Story</a>
+                                    </li>
+                                    <li>
+                                        <a href="fe_team.html">Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="fe_search.html">Search</a>
+                                    </li>
+                                    <li>
+                                        <a href="fe_helpdesk.html">Helpdesk</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-submenu" data-toggle="nav-submenu" href="#">Portfolio</a>
+                                        <ul>
+                                            <li>
+                                                <a href="fe_portfolio_single.html">Single</a>
+                                            </li>
+                                            <li>
+                                                <a href="fe_portfolio_2cols.html">2 Columns</a>
+                                            </li>
+                                            <li>
+                                                <a href="fe_portfolio_3cols.html">3 Columns</a>
+                                            </li>
+                                            <li>
+                                                <a href="fe_portfolio_4cols.html">4 Columns</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="active" href="fe_features.html">Features</a>
+                            </li>
+                            <li>
+                                <a href="fe_pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="fe_contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="fe_about.html">About</a>
+                            </li>
+                        </ul>
+                        <!-- END Header Navigation -->
+
+                        <!-- Color Themes (used just for demonstration) -->
+                        <!-- Themes functionality initialized in Codebase() -> uiHandleTheme() -->
+                        <div class="btn-group ml-5" role="group">
+                            <button type="button" class="btn btn-circle btn-dual-secondary" id="page-header-themes-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right min-width-150" aria-labelledby="page-header-themes-dropdown">
+                                <h6 class="dropdown-header text-center">Color Themes</h6>
+                                <div class="row no-gutters text-center">
+                                    <div class="col-4 mb-5">
+                                        <a class="text-default" data-toggle="theme" data-theme="default" href="javascript:void(0)">
+                                            <i class="fa fa-2x fa-circle"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 mb-5">
+                                        <a class="text-elegance" data-toggle="theme" data-theme="assets/css/themes/elegance.min.css" href="javascript:void(0)">
+                                            <i class="fa fa-2x fa-circle"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 mb-5">
+                                        <a class="text-pulse" data-toggle="theme" data-theme="assets/css/themes/pulse.min.css" href="javascript:void(0)">
+                                            <i class="fa fa-2x fa-circle"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 mb-5">
+                                        <a class="text-flat" data-toggle="theme" data-theme="assets/css/themes/flat.min.css" href="javascript:void(0)">
+                                            <i class="fa fa-2x fa-circle"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 mb-5">
+                                        <a class="text-corporate" data-toggle="theme" data-theme="assets/css/themes/corporate.min.css" href="javascript:void(0)">
+                                            <i class="fa fa-2x fa-circle"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 mb-5">
+                                        <a class="text-earth" data-toggle="theme" data-theme="assets/css/themes/earth.min.css" href="javascript:void(0)">
+                                            <i class="fa fa-2x fa-circle"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Color Themes -->
+
+                        <!-- Open Search Section -->
+                        <!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+                        <button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="header_search_on">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <!-- END Open Search Section -->
+
+                        <!-- Toggle Sidebar -->
+                        <!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+                        <button type="button" class="btn btn-circle btn-dual-secondary d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+                            <i class="fa fa-navicon"></i>
+                        </button>
+                        <!-- END Toggle Sidebar -->
+                    </div>
+                    <!-- END Right Section -->
+                </div>
+                <!-- END Header Content -->
+
+                <!-- Header Search -->
+                <div id="page-header-search" class="overlay-header">
+                    <div class="content-header content-header-fullrow">
+                        <form action="fe_search.html" method="post">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <!-- Close Search Section -->
+                                    <!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+                                    <button type="button" class="btn btn-secondary px-15" data-toggle="layout" data-action="header_search_off">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                    <!-- END Close Search Section -->
+                                </span>
+                                <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-secondary px-15">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- END Header Search -->
+
+                <!-- Header Loader -->
+                <!-- Please check out the Activity page under Elements category to see examples of showing/hiding it -->
+                <div id="page-header-loader" class="overlay-header bg-primary">
+                    <div class="content-header content-header-fullrow text-center">
+                        <div class="content-header-item">
+                            <i class="fa fa-sun-o fa-spin text-white"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Header Loader -->
+            </header>
+            <!-- END Header -->
+            <!-- Main Container -->
+            <main id="main-container">
+                <!-- Hero -->
+                <!-- jQuery Vide for video backgrounds, for more examples you can check out https://github.com/VodkaBears/Vide -->
+                <div class="bg-video" data-vide-bg="assets/img/videos/city_night" data-vide-options="posterType: jpg">
+                    <div class="hero bg-black-op">
+                        <div class="hero-inner">
+                            <div class="content content-full text-center">
+                                <h1 class="display-3 font-w700 text-white mb-10">Features</h1>
+                                <h2 class="font-w400 text-white-op">Built from the ground up.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Hero -->
+
+                <!-- Full Features -->
+                <div class="bg-white">
+                    <div class="content">
+                        <div class="row nice-copy py-30">
+                            <div class="col-sm-6 py-30">
+                                <div class="row">
+                                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
+                                        <div class="item item-circle item-2x bg-danger-light mb-30">
+                                            <i class="si si-fire text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <h4 class="font-size-xl font-w700 text-uppercase text-center text-lg-left mb-5">One Flexible Layout</h4>
+                                        <p class="mb-0">Codebase’s layout was built from the ground up to be flexible, lightweight and easy to use. It will enable you to build backend and frontend pages that look and work great.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 py-30">
+                                <div class="row">
+                                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
+                                        <div class="item item-circle item-2x bg-warning-light mb-30">
+                                            <i class="si si-rocket text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <h4 class="font-size-xl font-w700 text-uppercase text-center text-lg-left mb-5">Bootstrap 4</h4>
+                                        <p class="mb-0">Bootstrap is a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development. Codebase was built on top, extending it to a large degree.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 py-30">
+                                <div class="row">
+                                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
+                                        <div class="item item-circle item-2x bg-success-light text-success font-w400 mb-30">Sass</div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <h4 class="font-size-xl font-w700 text-uppercase text-center text-lg-left mb-5">Built with Sass</h4>
+                                        <p class="mb-0">Codebase CSS framework was built with Sass, following a completely modular approach which is super easy to follow, customize and extend.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 py-30">
+                                <div class="row">
+                                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
+                                        <div class="item item-circle item-2x bg-success-light mb-30">
+                                            <i class="si si-speedometer text-success"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <h4 class="font-size-xl font-w700 text-uppercase text-center text-lg-left mb-5">Fast &amp; Lightweight</h4>
+                                        <p class="mb-0">Codebase is not bloated with jQuery plugins and created to be as fast and lightweight as possible. Use on demand only the features you need for your project.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 py-30">
+                                <div class="row">
+                                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
+                                        <div class="item item-circle item-2x bg-elegance-lighter mb-30">
+                                            <i class="fa fa-tasks text-elegance"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <h4 class="font-size-xl font-w700 text-uppercase text-center text-lg-left mb-5">Gulp Tasks</h4>
+                                        <p class="mb-0">Time-saving tasks that can live compile your Sass as you work and also build for you a custom, minimized and production ready Codebase framework.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 py-30">
+                                <div class="row">
+                                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
+                                        <div class="item item-circle item-2x bg-flat-lighter mb-30">
+                                            <i class="si si-star text-flat"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <h4 class="font-size-xl font-w700 text-uppercase text-center text-lg-left mb-5">Get Started Version</h4>
+                                        <p class="mb-0">A simple version with boilerplate pages is also included in the package. It will help you rocket start your project.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Full Features -->
+
+                <!-- Testimonials -->
+                <div class="bg-image" style="background-image: url('assets/img/photos/photo16@2x.jpg');">
+                    <div class="bg-primary-dark-op">
+                        <div class="content content-full text-center">
+                            <div class="py-30 invisible" data-toggle="appear">
+                                <!-- Testimonials Slider (.js-slider class is initialized in Codebase() -> uiHelperSlick()) -->
+                                <!-- For more info and examples you can check out http://kenwheeler.github.io/slick/ -->
+                                <div class="js-slider slick-nav-black slick-dotted-white" data-arrows="true" data-dots="true">
+                                    <div>
+                                        <div class="py-10">
+                                            <img class="img-avatar img-avatar96 img-avatar-thumb" src="assets/img/avatars/avatar10.jpg" alt="">
+                                        </div>
+                                        <div class="row justify-content-center py-10">
+                                            <div class="col-md-8">
+                                                <div class="mb-10">
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                </div>
+                                                <h3 class="font-w700 text-white mb-10">Professional work!</h3>
+                                                <p class="font-size-lg text-body-bg-dark">Highly talended people who will help you bring your ideas to life.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="py-10">
+                                            <img class="img-avatar img-avatar96 img-avatar-thumb" src="assets/img/avatars/avatar3.jpg" alt="">
+                                        </div>
+                                        <div class="row justify-content-center py-10">
+                                            <div class="col-md-8">
+                                                <div class="mb-10">
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                </div>
+                                                <h3 class="font-w700 text-white mb-10">Our ideas came to life!</h3>
+                                                <p class="font-size-lg text-body-bg-dark">The final project exceeded our expectations! Thank you so much!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="py-10">
+                                            <img class="img-avatar img-avatar96 img-avatar-thumb" src="assets/img/avatars/avatar14.jpg" alt="">
+                                        </div>
+                                        <div class="row justify-content-center py-10">
+                                            <div class="col-md-8">
+                                                <div class="mb-10">
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                </div>
+                                                <h3 class="font-w700 text-white mb-10">Don’t hesitate, this is the team!</h3>
+                                                <p class="font-size-lg text-body-bg-dark">Stop looking, this is the team that will help you succeed.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Testimonials Slider -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Testimonials -->
+
+                <!-- Quick Features -->
+                <div class="bg-white">
+                    <div class="content content-full">
+                        <div class="row text-center py-30">
+                            <div class="col-sm-6 col-md-4 py-30">
+                                <div class="mb-20 invisible" data-toggle="appear" data-class="animated zoomIn">
+                                    <img src="assets/img/various/promo-icon-book.png" srcset="assets/img/various/promo-icon-book@2x.png 2x" alt="">
+                                </div>
+                                <h4 class="font-w400 text-black text-uppercase mb-0 invisible" data-toggle="appear" data-class="animated fadeInUp">Documentation</h4>
+                            </div>
+                            <div class="col-sm-6 col-md-4 py-30">
+                                <div class="mb-20 invisible" data-toggle="appear" data-class="animated zoomIn">
+                                    <img src="assets/img/various/promo-icon-console.png" srcset="assets/img/various/promo-icon-console@2x.png 2x" alt="">
+                                </div>
+                                <h4 class="font-w400 text-black text-uppercase mb-0 invisible" data-toggle="appear" data-class="animated fadeInUp">Clean Code</h4>
+                            </div>
+                            <div class="col-sm-6 col-md-4 py-30">
+                                <div class="mb-20 invisible" data-toggle="appear" data-class="animated zoomIn">
+                                    <img src="assets/img/various/promo-icon-diamond.png" srcset="assets/img/various/promo-icon-diamond@2x.png 2x" alt="">
+                                </div>
+                                <h4 class="font-w400 text-black text-uppercase mb-0 invisible" data-toggle="appear" data-class="animated fadeInUp">Powerful Layout</h4>
+                            </div>
+                            <div class="col-sm-6 col-md-4 py-30">
+                                <div class="mb-20 invisible" data-toggle="appear" data-class="animated zoomIn">
+                                    <img src="assets/img/various/promo-icon-hourglass.png" srcset="assets/img/various/promo-icon-hourglass@2x.png 2x" alt="">
+                                </div>
+                                <h4 class="font-w400 text-black text-uppercase mb-0 invisible" data-toggle="appear" data-class="animated fadeInUp">Save Time</h4>
+                            </div>
+                            <div class="col-sm-6 col-md-4 py-30">
+                                <div class="mb-20 invisible" data-toggle="appear" data-class="animated zoomIn">
+                                    <img src="assets/img/various/promo-icon-lamp.png" srcset="assets/img/various/promo-icon-lamp@2x.png 2x" alt="">
+                                </div>
+                                <h4 class="font-w400 text-black text-uppercase mb-0 invisible" data-toggle="appear" data-class="animated fadeInUp">Ideas</h4>
+                            </div>
+                            <div class="col-sm-6 col-md-4 py-30">
+                                <div class="mb-20 invisible" data-toggle="appear" data-class="animated zoomIn">
+                                    <img src="assets/img/various/promo-icon-lifebuoy.png" srcset="assets/img/various/promo-icon-lifebuoy@2x.png 2x" alt="">
+                                </div>
+                                <h4 class="font-w400 text-black text-uppercase mb-0 invisible" data-toggle="appear" data-class="animated fadeInUp">Support</h4>
+                            </div>
+                            <div class="col-sm-6 col-md-4 py-30">
+                                <div class="mb-20 invisible" data-toggle="appear" data-class="animated zoomIn">
+                                    <img src="assets/img/various/promo-icon-satelite.png" srcset="assets/img/various/promo-icon-satelite@2x.png 2x" alt="">
+                                </div>
+                                <h4 class="font-w400 text-black text-uppercase mb-0 invisible" data-toggle="appear" data-class="animated fadeInUp">Components</h4>
+                            </div>
+                            <div class="col-sm-6 col-md-4 py-30">
+                                <div class="mb-20 invisible" data-toggle="appear" data-class="animated zoomIn">
+                                    <img src="assets/img/various/promo-icon-shield.png" srcset="assets/img/various/promo-icon-shield@2x.png 2x" alt="">
+                                </div>
+                                <h4 class="font-w400 text-black text-uppercase mb-0 invisible" data-toggle="appear" data-class="animated fadeInUp">Feature Rich</h4>
+                            </div>
+                            <div class="col-sm-12 col-md-4 py-30">
+                                <div class="mb-20 invisible" data-toggle="appear" data-class="animated zoomIn">
+                                    <img src="assets/img/various/promo-icon-workplace.png" srcset="assets/img/various/promo-icon-workplace@2x.png 2x" alt="">
+                                </div>
+                                <h4 class="font-w400 text-black text-uppercase mb-0 invisible" data-toggle="appear" data-class="animated fadeInUp">Work Smarter</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Quick Features -->
+
+                <!-- Quick Stats -->
+                <div class="bg-primary-dark bg-pattern" style="background-image: url('assets/img/various/bg-fe-pattern.png');">
+                    <div class="content content-full">
+                        <!-- CountTo ([data-toggle="countTo"] is initialized in Codebase() -> uiHelperCoreAppearCountTo()) -->
+                        <!-- For more info and examples you can check out https://github.com/mhuggins/jquery-countTo -->
+                        <div class="row text-center py-30">
+                            <div class="col-sm-6 col-md-3 py-30">
+                                <div class="mb-20">
+                                    <i class="si si-users fa-3x text-primary-lighter"></i>
+                                </div>
+                                <div class="font-size-h1 font-w700 text-white mb-5" data-toggle="countTo" data-to="10000" data-after="+">0</div>
+                                <div class="font-w600 text-white-op text-uppercase">Customers</div>
+                            </div>
+                            <div class="col-sm-6 col-md-3 py-30">
+                                <div class="mb-20">
+                                    <i class="si si-briefcase fa-3x text-primary-lighter"></i>
+                                </div>
+                                <div class="font-size-h1 font-w700 text-white mb-5" data-toggle="countTo" data-to="10" data-after="+">0</div>
+                                <div class="font-w600 text-white-op text-uppercase">Projects</div>
+                            </div>
+                            <div class="col-sm-6 col-md-3 py-30">
+                                <div class="mb-20">
+                                    <i class="si si-clock fa-3x text-primary-lighter"></i>
+                                </div>
+                                <div class="font-size-h1 font-w700 text-white mb-5" data-toggle="countTo" data-to="17600" data-after="+">0</div>
+                                <div class="font-w600 text-white-op text-uppercase">Hours</div>
+                            </div>
+                            <div class="col-sm-6 col-md-3 py-30">
+                                <div class="mb-20">
+                                    <i class="si si-star fa-3x text-primary-lighter"></i>
+                                </div>
+                                <div class="font-size-h1 font-w700 text-white mb-5" data-toggle="countTo" data-to="850" data-after="+">0</div>
+                                <div class="font-w600 text-white-op text-uppercase">5 Star Ratings</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Quick Stats -->
+
+                <!-- Call to Action -->
+                <div class="bg-body-light">
+                    <div class="content content-full text-center">
+                        <div class="py-30">
+                            <h3 class="font-w700 mb-10">Awesome Features</h3>
+                            <h4 class="font-w400 text-muted mb-30">Emotional Design &amp; Inspiring Projects</h4>
+                            <a class="btn btn-hero btn-rounded btn-alt-primary" href="fe_pricing.html">Get Started today</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Call to Action -->
+            </main>
+            <!-- END Main Container -->
+
+            <!-- Footer -->
+            <footer id="page-footer" class="bg-white opacity-0">
+                <div class="content content-full">
+                    <!-- Footer Navigation -->
+                    <div class="row items-push-2x mt-30">
+                        <div class="col-6 col-md-4">
+                            <h3 class="h5 font-w700">Company</h3>
+                            <ul class="list list-simple-mini font-size-sm">
+                                <li>
+                                    <a class="link-effect font-w600" href="fe_home.html">Home</a>
+                                </li>
+                                <li>
+                                    <a class="link-effect font-w600" href="fe_features.html">Features</a>
+                                </li>
+                                <li>
+                                    <a class="link-effect font-w600" href="fe_pricing.html">Pricing</a>
+                                </li>
+                                <li>
+                                    <a class="link-effect font-w600" href="fe_contact.html">Contact</a>
+                                </li>
+                                <li>
+                                    <a class="link-effect font-w600" href="fe_team.html">Team</a>
+                                </li>
+                                <li>
+                                    <a class="link-effect font-w600" href="fe_about.html">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <h3 class="h5 font-w700">Explore</h3>
+                            <ul class="list list-simple-mini font-size-sm">
+                                <li>
+                                    <a class="link-effect font-w600" href="be_pages_dashboard.html">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a class="link-effect font-w600" href="op_auth_signin.html">Sign In</a>
+                                </li>
+                                <li>
+                                    <a class="link-effect font-w600" href="op_auth_signup.html">Sign Up</a>
+                                </li>
+                                <li>
+                                    <a class="link-effect font-w600" href="fe_helpdesk.html">Helpdesk</a>
+                                </li>
+                                <li>
+                                    <a class="link-effect font-w600" href="javascript:void(0)">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a class="link-effect font-w600" href="javascript:void(0)">Terms &amp; Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="h5 font-w700">Company LTD</h3>
+                            <div class="font-size-sm mb-30">
+                                1080 Sunshine Valley, Suite 2563<br>
+                                San Francisco, CA 85214<br>
+                                <abbr title="Phone">P:</abbr> (123) 456-7890
+                            </div>
+                            <h3 class="h5 font-w700">Our Newsletter</h3>
+                            <form action="fe_home.html" method="post" onsubmit="return false;">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="fe-subscribe-email" name="fe-subscribe-email" placeholder="Your email..">
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- END Footer Navigation -->
+
+                    <!-- Copyright Info -->
+                    <div class="font-size-xs clearfix border-t pt-20 pb-10">
+                        <div class="float-right">
+                            Crafted with <i class="fa fa-heart text-pulse"></i> by <a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>
+                        </div>
+                        <div class="float-left">
+                            <a class="font-w600" href="https://goo.gl/po9Usv" target="_blank">Codebase 1.1</a> &copy; <span class="js-year-copy">2017</span>
+                        </div>
+                    </div>
+                    <!-- END Copyright Info -->
+                </div>
+            </footer>
+            <!-- END Footer -->
+        </div>
+        <!-- END Page Container -->
+
+        <!-- Codebase Core JS -->
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/popper.min.js"></script>
+        <script src="assets/js/core/bootstrap.min.js"></script>
+        <script src="assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="assets/js/core/jquery.appear.min.js"></script>
+        <script src="assets/js/core/jquery.countTo.min.js"></script>
+        <script src="assets/js/core/js.cookie.min.js"></script>
+        <script src="assets/js/codebase.js"></script>
+
+        <!-- Page Plugins -->
+        <script src="assets/js/plugins/jquery-vide/jquery.vide.min.js"></script>
+        <script src="assets/js/plugins/slick/slick.min.js"></script>
+
+        <!-- Page JS Code -->
+        <script>
+            jQuery(function () {
+                // Init page helpers (Slick Slider plugin)
+                Codebase.helpers('slick');
+            });
+        </script>
+    </body>
+</html>
